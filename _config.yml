@@ -1,0 +1,15 @@
+title: Axel
+description: A personal site about design, AI, math, and philosophy.
+baseurl: ""
+url: ""
+
+# Build settings
+markdown: kramdown
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor

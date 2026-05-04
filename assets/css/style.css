@@ -1,0 +1,405 @@
+/* ==========================================================================
+   Theme variables
+   ========================================================================== */
+:root {
+  --bg-main: #f5f3ea;
+  --bg-sidebar: #f0ecda;
+  --bg-absolute: #2c0f0f;
+
+  --color-heading: #550000;
+  --color-accent: #800000;
+  --color-text: #1a1a1a;
+  --color-link: #1a1a1a;
+
+  --font-serif: 'Crimson Text', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Figtree', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --sidebar-width: 23%;
+  --main-width: 47%;
+  --sidebar-min-width: 240px;
+
+  --content-max: 1024px;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--bg-absolute);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-underline-offset: 3px;
+}
+
+/* ==========================================================================
+   Page layout
+   ========================================================================== */
+.page {
+  display: grid;
+  grid-template-columns: 1fr var(--sidebar-width) var(--main-width) 1fr ;
+  min-height: 100vh;
+}
+
+.sidebar {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: stretch;
+  background-color: var(--bg-sidebar);
+}
+
+.sidebar__inner {
+  padding: 2rem 1.5rem;
+}
+
+.main {
+  grid-column: 3;
+  grid-row: 1;
+  padding: 1.75rem 3rem 2rem 3rem;
+  background-color: var(--bg-main);
+  max-width: 100%;
+}
+
+/* ==========================================================================
+   Sidebar — site logo
+   ========================================================================== */
+.site-logo {
+  width: 100%;
+  height: 200px;
+  margin: 0 auto 1.25rem;
+}
+
+.site-logo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ==========================================================================
+   Sidebar — navigation
+   ========================================================================== */
+.site-nav {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.site-nav ul + ul {
+  margin-top: 0.5rem;
+}
+
+.site-nav a {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #000;
+}
+
+/* ==========================================================================
+   Sidebar — separator diamond (between nav items)
+   ========================================================================== */
+.site-nav__diamond {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-accent);
+  transform: rotate(45deg);
+  /* Optical alignment with the cap-height of surrounding text */
+  margin-top: 0.1em;
+}
+
+/* ==========================================================================
+   Sidebar — blurb
+   ========================================================================== */
+.blurb {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 1.45;
+  color: var(--color-text);
+  text-align: center;
+  margin: 0;
+  padding: 0 0.5rem;
+}
+
+/* ==========================================================================
+   Main — sections
+   ========================================================================== */
+.post-section {
+  margin-bottom: 2.5rem;
+}
+
+.post-section:first-child {
+  margin-top: 0;
+}
+
+.section-heading {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 2.25rem;
+  color: var(--color-heading);
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.005em;
+}
+
+.section-divider {
+  border: 0;
+  border-top: 1.5px solid var(--color-accent);
+  margin: 0.5rem 0 1.25rem 0;
+}
+
+.post-divider {
+  border: 0;
+  border-top: 1px solid var(--color-accent);
+  opacity: 0.6;
+  margin: 1.25rem 0;
+}
+
+/* ==========================================================================
+   Main — posts
+   ========================================================================== */
+.post {
+  margin-bottom: 1.5rem;
+}
+
+.post-title {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: var(--color-heading);
+  line-height: 1.2;
+  margin: 0 0 0.6rem 0;
+}
+
+.post-title a {
+  color: inherit;
+}
+
+.post-blurb {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  color: var(--color-text);
+  margin: 0;
+}
+
+/* Post with a thumbnail (e.g., DataNews logo) */
+.post--with-thumb {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.post-text {
+  min-width: 0;
+}
+
+.post-thumb {
+  width: 110px;
+  height: 110px;
+  border: 1.5px solid #000;
+  background-color: var(--bg-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.post-thumb__label {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  font-size: 2.25rem;
+  color: rgba(0, 0, 0, 0.42);
+  letter-spacing: -0.02em;
+}
+
+/* ==========================================================================
+   Post layout
+   ========================================================================== */
+.post-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+  background-color: var(--bg-main);
+}
+
+.post-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.post-header__logo-link {
+  display: block;
+}
+
+.post-header__logo-link:hover {
+  text-decoration: none;
+}
+
+.post-header .site-logo {
+  width: 100%;
+  max-width: 240px;
+  height: 200px;
+  margin: 0 auto 0rem;
+}
+
+.post-article__title {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 1.2;
+  color: var(--color-heading);
+  text-align: center;
+  margin: 0 0 2rem 0;
+  letter-spacing: -0.005em;
+}
+
+.post-article__content {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+.post-article__content p {
+  margin: 0 0 1rem 0;
+}
+
+.post-article__content h2 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--color-heading);
+  margin: 2rem 0 0.75rem;
+}
+
+.post-article__content h3 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--color-heading);
+  margin: 1.5rem 0 0.5rem;
+}
+
+.post-article__content a {
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-underline-offset: 3px;
+}
+
+.post-article__content code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95em;
+  background-color: var(--bg-sidebar);
+  padding: 0.1em 0.35em;
+}
+
+.post-article__content pre {
+  background-color: var(--bg-sidebar);
+  padding: 1rem;
+  overflow-x: auto;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.post-article__content pre code {
+  background: none;
+  padding: 0;
+}
+
+.post-article__content blockquote {
+  border-left: 2px solid var(--color-accent);
+  margin: 1.25rem 0;
+  padding: 0.25rem 0 0.25rem 1rem;
+  color: var(--color-text);
+  font-style: italic;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media (max-width: 720px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar,
+  .main {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .sidebar {
+    order: -1;
+    border-bottom: 1px solid var(--color-accent);
+  }
+
+  .sidebar__inner {
+    padding: 1.5rem 1rem;
+  }
+
+  .main {
+    padding: 1.5rem 1.25rem;
+    max-width: none;
+  }
+
+  .post--with-thumb {
+    grid-template-columns: 1fr;
+  }
+
+  .post-thumb {
+    width: 90px;
+    height: 90px;
+  }
+
+  .post-page {
+    padding: 1.5rem 1.25rem 2.5rem;
+  }
+
+  .post-header {
+    margin-bottom: 2rem;
+  }
+
+  .post-header .site-logo {
+    height: 160px;
+    max-width: 200px;
+  }
+
+  .post-article__title {
+    font-size: 1.65rem;
+  }
+}

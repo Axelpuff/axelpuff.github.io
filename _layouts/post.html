@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<div class="post-page">
+  <header class="post-header">
+    <nav class="site-nav site-nav--horizontal" aria-label="Primary">
+      <ul>
+        <li><a href="{{ '/' | relative_url }}">Portfolio</a></li>
+        <li class="site-nav__diamond" aria-hidden="true"></li>
+        <li><a href="{{ '/writing' | relative_url }}">Writing</a></li>
+        <li class="site-nav__diamond" aria-hidden="true"></li>
+        <li><a href="{{ '/about' | relative_url }}">About</a></li>
+      </ul>
+    </nav>
+    
+    <a class="post-header__logo-link" href="{{ '/' | relative_url }}" aria-label="Home">
+      <div class="site-logo" aria-hidden="true">
+        <img src="{{ '/assets/axel_logo.svg' | relative_url }}" alt="" />
+      </div>
+    </a>
+  </header>
+
+  <article class="post-article">
+    <h1 class="post-article__title">{{ page.title }}</h1>
+    <div class="post-article__content">
+      {{ content }}
+    </div>
+  </article>
+</div>

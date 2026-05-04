@@ -1,0 +1,85 @@
+---
+layout: default
+title: Home
+---
+
+<div class="page">
+  <main class="main">
+    <section class="post-section">
+      <h2 class="section-heading">Featured</h2>
+      <hr class="section-divider" />
+
+      {% for post in site.posts %}
+        {% if post.tags contains "featured" %}
+          <article class="post {% if post.cover_image %} post--with-thumb {% endif %}">
+          <div class="post-text">
+            <h3 class="post-title">
+              <a href="{{ post.url }}">{{ post.title }}</a>
+            </h3>
+            <p class="post-blurb">
+              {{ post.excerpt }}
+            </p>
+          </div>
+          {% if post.cover_image %}
+          <div class="post-thumb" aria-hidden="true">
+            <span class="post-thumb__label">{{ post.cover_image }}</span>
+          </div>
+          {% endif %}
+        </article>
+        {% unless forloop.last %}
+            <hr class="post-divider" />
+        {% endunless %}
+        {% endif %}
+      {% endfor %}
+
+      <hr class="section-divider" />
+    </section>
+
+    <section class="post-section">
+      <h2 class="section-heading">Recent</h2>
+      <hr class="section-divider" />
+
+      <article class="post">
+        <h3 class="post-title">
+          <a href="#">Choose a Philosophy and then Never Deviate from it, Ever</a>
+        </h3>
+        <p class="post-blurb">
+          I argue for choosing an ethical system as early as possible and then
+          either never changing it (or claiming that nothing fundamental
+          changes about it) for the rest of your life.
+        </p>
+      </article>
+
+      <hr class="section-divider" />
+    </section>
+  </main>
+
+  <aside class="sidebar">
+    <div class="sidebar__inner">
+      <div class="site-logo" aria-hidden="true">
+        <!-- Decorative monogram standing in for the hand-drawn logo in the mock -->
+        <img src="assets/axel_logo.svg">
+      </div>
+
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#">Portfolio</a></li>
+          <li class="site-nav__diamond" aria-hidden="true"></li>
+          <li><a href="#">Writing</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+
+      <p class="blurb">
+        Welcome to my page! I'm Axel.
+        I like to design and make
+        beautiful software. I also write
+        about AI, math,
+        philosophy, and other topics.
+      </p>
+      <a href="{% post_url 2026-05-04-math-25a %}">test</a>
+    </div>
+  </aside>
+</div>
