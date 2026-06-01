@@ -239,12 +239,27 @@ a:hover {
   flex-shrink: 0;
 }
 
+/* Text-label thumbnail. Currently unused — posts now use an icon image
+   (.post-thumb--image) rather than a cover_image string label. Kept for reuse. */
 .post-thumb__label {
   font-family: 'Courier New', Courier, monospace;
   font-weight: 700;
   font-size: 2.25rem;
   color: rgba(0, 0, 0, 0.42);
   letter-spacing: -0.02em;
+}
+
+/* Image thumbnail (e.g., a pre-rounded icon) — no border or background */
+.post-thumb--image {
+  border: 0;
+  background: none;
+}
+
+.post-thumb--image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* ==========================================================================
@@ -297,6 +312,13 @@ a:hover {
 
 .post-article__content p {
   margin: 0 0 1rem 0;
+}
+
+.post-article__content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 0 1.5rem 0;
 }
 
 .post-article__content h2 {

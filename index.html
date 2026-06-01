@@ -11,7 +11,7 @@ title: Home
 
       {% for post in site.posts %}
         {% if post.tags contains "featured" %}
-          <article class="post {% if post.cover_image %} post--with-thumb {% endif %}">
+          <article class="post {% if post.icon %} post--with-thumb {% endif %}">
           <div class="post-text">
             <h3 class="post-title">
               <a href="{{ post.url }}">{{ post.title }}</a>
@@ -20,10 +20,10 @@ title: Home
               {{ post.excerpt }}
             </p>
           </div>
-          {% if post.cover_image %}
-          <div class="post-thumb" aria-hidden="true">
-            <span class="post-thumb__label">{{ post.cover_image }}</span>
-          </div>
+          {% if post.icon %}
+          <a class="post-thumb post-thumb--image" href="{{ post.url }}" aria-hidden="true" tabindex="-1">
+            <img src="{{ post.icon | relative_url }}" alt="" />
+          </a>
           {% endif %}
         </article>
         {% unless forloop.last %}
@@ -37,19 +37,6 @@ title: Home
 
     <section class="post-section">
       <h2 class="section-heading">Recent</h2>
-      <hr class="section-divider" />
-
-      <article class="post">
-        <h3 class="post-title">
-          <a href="#">Choose a Philosophy and then Never Deviate from it, Ever</a>
-        </h3>
-        <p class="post-blurb">
-          I argue for choosing an ethical system as early as possible and then
-          either never changing it (or claiming that nothing fundamental
-          changes about it) for the rest of your life.
-        </p>
-      </article>
-
       <hr class="section-divider" />
     </section>
   </main>
@@ -75,11 +62,10 @@ title: Home
       <p class="blurb">
         Welcome to my page! I'm Axel.
         I like to design and make
-        beautiful software. I also write
-        about AI, math,
-        philosophy, and other topics.
+        beautiful software. I'm also
+        interested in AI, math,
+        philosophy, and other stuff.
       </p>
-      <a href="{% post_url 2026-05-04-math-25a %}">test</a>
     </div>
   </aside>
 </div>
