@@ -347,17 +347,19 @@ a:hover {
 .post-article__content h2 {
   font-family: var(--font-serif);
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.9rem;
+  line-height: 1.25;
   color: var(--color-heading);
-  margin: 2rem 0 0.75rem;
+  margin: 2.75rem 0 1rem;
 }
 
 .post-article__content h3 {
   font-family: var(--font-serif);
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 1.45rem;
+  line-height: 1.3;
   color: var(--color-heading);
-  margin: 1.5rem 0 0.5rem;
+  margin: 2rem 0 0.75rem;
 }
 
 .post-article__content a {
@@ -447,4 +449,75 @@ a:hover {
   .post-article__title {
     font-size: 1.65rem;
   }
+}
+
+.post-article__content ul,
+.post-article__content ol {
+  margin: 0 0 1.25rem 0;
+  padding-left: 1.5em;
+}
+
+.post-article__content li {
+  margin-bottom: 0.35rem;
+}
+
+.post-article__content blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.post-article__content hr {
+  border: 0;
+  border-top: 1px solid var(--color-accent);
+  opacity: 0.6;
+  margin: 2.5rem 0;
+}
+
+.post-article__content .post-crosspost {
+  margin-top: 2rem;
+  color: var(--color-heading);
+}
+
+/* KaTeX's default 1.21em runs large next to Crimson Text */
+.post-article__content .katex {
+  font-size: 1.05em;
+}
+
+/* Footnotes (kramdown) */
+.post-article__content sup {
+  line-height: 0;
+}
+
+.post-article__content .footnote {
+  text-decoration: none;
+  color: var(--color-accent);
+  padding: 0 0.1em;
+}
+
+.post-article__content .footnotes {
+  font-size: 1rem;
+  line-height: 1.55;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(128, 0, 0, 0.6);
+}
+
+.post-article__content .footnotes > ol > li {
+  margin-bottom: 0.75rem;
+}
+
+.post-article__content .footnotes ul {
+  margin: 0.25rem 0 0.5rem;
+}
+
+.post-article__content .footnotes ul li {
+  margin-bottom: 0;
+}
+
+.post-article__content .footnotes p {
+  margin-bottom: 0.5rem;
+}
+
+.post-article__content .reversefootnote {
+  text-decoration: none;
+  color: var(--color-accent);
 }

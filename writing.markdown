@@ -4,7 +4,7 @@ title: Writing
 permalink: /writing/
 ---
 
-Crystallized thoughts.
+I do not want this page to evoke the familiar sensation of "yet another dead aspirational blog, how sad." If it does, please message me directly and I will post something. Potentially on a subject of your choice.
 
 {% assign writing = site.categories.writing %}
 {% if writing and writing.size > 0 %}

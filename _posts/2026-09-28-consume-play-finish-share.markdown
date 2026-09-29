@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The Four Elements"
+title:  "Four Creative Acts"
 date:   2026-09-28 12:00:00 -0400
 categories: writing
 excerpt: "If you wish to be a creator, then you must first consume ravenously. But do not consume too much without creating..."
