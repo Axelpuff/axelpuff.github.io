@@ -4,9 +4,15 @@ title: About
 permalink: /about/
 ---
 
-Hi, I'm Axel. I like to design and make beautiful software. I'm also
-interested in AI, math, philosophy, and other stuff.
+Hi, I'm Axel. In order of precedence:
 
-This is a placeholder for a proper introduction — more about me, my work,
-and how to get in touch is on the way. For now, have a look at my
+1. I read papers and write code.
+2. I read books and write in English.
+3. I listen to music and produce tracks.
+4. I look at things and make drawings.
+
+In everything I aim for the beauty that is found in good taste and skillful execution.
+
+Some of my important intellectual influences (in no particular order): C. G. Jung, Gwern Branwen, Zhuangzi, Eliezer Yudkowsky. No particular endorsement or admiration of their views or persons is implied.
+
 [portfolio]({{ '/' | relative_url }}).
