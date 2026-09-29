@@ -6,6 +6,9 @@ categories: writing
 excerpt: "If you wish to be a creator, then you must first consume ravenously. But do not consume too much without creating..."
 ---
 
+*After Xunzi.*
+{: .epigraph}
+
 If you wish to be a creator, then you must first consume ravenously. But do not consume too much without creating. If you do not, then you will build the habit of consuming without creating, and you will become passive.
 
 If you wish to finish things, then you must first play constantly with your tools and ideas. But do not play too much without finishing anything. If you do not, you will grow accustomed to the fun of playing around without finishing anything, and you will remain an amateur.

@@ -268,7 +268,8 @@ a:hover {
 .post-page {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 2rem 1.5rem 3rem;
+  min-height: 100vh;
+  padding: 2rem 1.5rem 4rem;
   background-color: var(--bg-main);
 }
 
@@ -303,15 +304,37 @@ a:hover {
   letter-spacing: -0.005em;
 }
 
-.post-article__content {
+/* The date sits directly under the title, so pull the title's margin in */
+.post-article__title:has(+ .post-article__date) {
+  margin-bottom: 0.5rem;
+}
+
+.post-article__date {
+  display: block;
   font-family: var(--font-serif);
-  font-size: 1.05rem;
-  line-height: 1.6;
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--color-accent);
+  text-align: center;
+  margin: 0 0 2.75rem 0;
+}
+
+/* Keep lines to a comfortable reading measure */
+.post-article__content {
+  max-width: 34em;
+  margin: 0 auto;
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  line-height: 1.65;
   color: var(--color-text);
 }
 
 .post-article__content p {
-  margin: 0 0 1rem 0;
+  margin: 0 0 1.25rem 0;
+}
+
+.post-article__content .epigraph {
+  text-align: center;
 }
 
 .post-article__content img {
