@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Consume, Play, Finish, Share"
+title:  "The Four Elements"
 date:   2026-09-28 12:00:00 -0400
 categories: writing
-excerpt: "On the habits that make a creator, and how to keep each one from crowding out the next."
+excerpt: "If you wish to be a creator, then you must first consume ravenously. But do not consume too much without creating..."
 ---
 
 If you wish to be a creator, then you must first consume ravenously. But do not consume too much without creating. If you do not, then you will build the habit of consuming without creating, and you will become passive.

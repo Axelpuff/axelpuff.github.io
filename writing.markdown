@@ -4,8 +4,7 @@ title: Writing
 permalink: /writing/
 ---
 
-I'm planning to write here about AI, math, philosophy, and the craft of
-designing beautiful software — among other stuff.
+Crystallized thoughts.
 
 {% assign writing = site.categories.writing %}
 {% if writing and writing.size > 0 %}
