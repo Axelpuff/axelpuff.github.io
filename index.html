@@ -38,6 +38,22 @@ title: Home
     <section class="post-section">
       <h2 class="section-heading">Recent</h2>
       <hr class="section-divider" />
+
+      {% for post in site.categories.writing limit: 3 %}
+        <article class="post">
+          <div class="post-text">
+            <h3 class="post-title">
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </h3>
+            <p class="post-blurb">
+              {{ post.excerpt }}
+            </p>
+          </div>
+        </article>
+        {% unless forloop.last %}
+            <hr class="post-divider" />
+        {% endunless %}
+      {% endfor %}
     </section>
   </main>
 
