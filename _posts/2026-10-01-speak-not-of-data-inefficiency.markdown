@@ -3,7 +3,7 @@ layout: post
 title:  "Speak Not of Data Inefficiency"
 date:   2026-10-01 02:07:37 -0400
 categories: writing
-excerpt: "A preschooler has seen petabytes of video and runs on trillions of parameters. Are language models really the data-inefficient ones?"
+excerpt: "Humans are really bad at comparing themselves to models."
 ---
 
 Humans are really bad at comparing themselves to models.
