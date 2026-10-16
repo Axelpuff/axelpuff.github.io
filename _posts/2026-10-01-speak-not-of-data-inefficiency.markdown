@@ -3,7 +3,13 @@ layout: post
 title:  "Speak Not of Data Inefficiency"
 date:   2026-10-01 02:07:37 -0400
 categories: writing
-excerpt: "Humans are really bad at comparing themselves to models."
+excerpt: "(Edit 2026-10-15: The main point I was trying to make is that discrete token language modeling is a very alien objective, and it is the only objective that has allowed us to achieve current intelligence levels with current levels of compute. World model/game based approaches that are more intuitively "human" in some ways have not yielded comparable results. Therefore discrete token language modeling may be very "data efficient" in some sense.
+
+This is a comparison of ML objectives rather than architectures or algorithms. If you compare current ML architectures to humans on "data efficiency" for learning from language, ML loses sorely.
+
+I think that trying to draw implications about models based on comparisons to humans is very tricky; this post intentionally does this at points for rhetoric, which may have been more trouble than it was worth.)
+
+Humans are really bad at comparing themselves to models."
 ---
 
 Humans are really bad at comparing themselves to models.
