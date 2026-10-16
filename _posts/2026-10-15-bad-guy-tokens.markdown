@@ -3,7 +3,7 @@ layout: post
 title:  "Bad Guy Tokens"
 date:   2026-10-15 22:28:13 -0400
 categories: writing
-excerpt: "Fine-tuning a model on bad advice may not make it evil. It may just teach the system prompt tokens to summon a bad guy."
+excerpt: "Emergent misalignment isn't what it seems."
 ---
 
 Based on [a recent paper](https://arxiv.org/pdf/2606.06667), training models to give bad advice in a narrow domain doesn't make the model or "the persona" broadly evil in a robust way. It just makes the particular system prompt[^1] tokens you fine-tuned with evoke an evil persona, and perturbing it a little (e.g. changing the date slightly) substantially reduces misaligned behavior.

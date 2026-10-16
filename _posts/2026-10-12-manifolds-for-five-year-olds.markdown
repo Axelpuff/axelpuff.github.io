@@ -3,7 +3,7 @@ layout: post
 title:  "Manifolds for Five-Year Olds"
 date:   2026-10-12 00:58:57 -0400
 categories: writing
-excerpt: "Mechinterp jargon like featurizers, SAEs and block sparsity, explained so simply a five-year-old could follow."
+excerpt: "Ambitious mechanistic interpretability research is full of jargon, but the underlying intuitions are simple."
 ---
 
 Ambitious mechanistic interpretability research is full of jargon, but the underlying intuitions are so simple that a five-year-old (with a firm grasp of linear algebra) could understand them.
