@@ -39,21 +39,51 @@ title: Home
       <h2 class="section-heading">Recent</h2>
       <hr class="section-divider" />
 
-      {% for post in site.categories.writing limit: 3 %}
-        <article class="post">
-          <div class="post-text">
-            <h3 class="post-title">
-              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-            </h3>
-            <p class="post-blurb">
-              {{ post.excerpt }}
-            </p>
-          </div>
-        </article>
-        {% unless forloop.last %}
+      <div class="recent-list">
+      {% for post in site.categories.writing %}
+        <div class="recent-item">
+          {% unless forloop.first %}
             <hr class="post-divider" />
-        {% endunless %}
+          {% endunless %}
+          <article class="post">
+            <div class="post-text">
+              <h3 class="post-title">
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              </h3>
+              <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">
+                {{ post.date | date: "%B %-d, %Y" }}
+              </time>
+              <p class="post-blurb">
+                {{ post.excerpt }}
+              </p>
+            </div>
+          </article>
+        </div>
       {% endfor %}
+      </div>
+
+      <a class="more-link" href="{{ '/writing/' | relative_url }}">More…</a>
+
+      <script>
+        // Show only as many recent posts as fit on one screen (at least 3).
+        (function () {
+          var items = document.querySelectorAll('.recent-item');
+          var more = document.querySelector('.more-link');
+          function fit() {
+            items.forEach(function (el) { el.hidden = false; });
+            var limit = window.innerHeight - more.offsetHeight - 32;
+            for (var i = 3; i < items.length; i++) {
+              if (items[i].getBoundingClientRect().bottom + window.scrollY > limit) {
+                for (var j = i; j < items.length; j++) items[j].hidden = true;
+                break;
+              }
+            }
+          }
+          fit();
+          window.addEventListener('resize', fit);
+          if (document.fonts) document.fonts.ready.then(fit);
+        })();
+      </script>
     </section>
   </main>
 

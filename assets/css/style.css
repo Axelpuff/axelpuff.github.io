@@ -238,6 +238,19 @@ a:hover {
   color: inherit;
 }
 
+.post-title:has(+ .post-date) {
+  margin-bottom: 0.25rem;
+}
+
+.post-date {
+  display: block;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--color-accent);
+  margin: 0 0 0.6rem 0;
+}
+
 .post-blurb {
   font-family: var(--font-serif);
   font-weight: 600;
@@ -245,6 +258,14 @@ a:hover {
   line-height: 1.4;
   color: var(--color-text);
   margin: 0;
+}
+
+.more-link {
+  display: inline-block;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--color-accent);
 }
 
 /* Post with a thumbnail (e.g., DataNews logo) */
