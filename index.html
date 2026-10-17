@@ -66,12 +66,17 @@ title: Home
 
       <script>
         // Show only as many recent posts as fit on one screen (at least 3).
+        // Fit to the tallest viewport seen at the current width, so transient
+        // height drops (e.g. Firefox's fullscreen toolbar sliding in) don't
+        // reflow the list.
         (function () {
           var items = document.querySelectorAll('.recent-item');
           var more = document.querySelector('.more-link');
+          var width = window.innerWidth;
+          var height = window.innerHeight;
           function fit() {
             items.forEach(function (el) { el.hidden = false; });
-            var limit = window.innerHeight - more.offsetHeight - 32;
+            var limit = height - more.offsetHeight - 32;
             for (var i = 3; i < items.length; i++) {
               if (items[i].getBoundingClientRect().bottom + window.scrollY > limit) {
                 for (var j = i; j < items.length; j++) items[j].hidden = true;
@@ -80,7 +85,17 @@ title: Home
             }
           }
           fit();
-          window.addEventListener('resize', fit);
+          window.addEventListener('resize', function () {
+            if (window.innerWidth !== width) {
+              width = window.innerWidth;
+              height = window.innerHeight;
+            } else if (window.innerHeight > height) {
+              height = window.innerHeight;
+            } else {
+              return;
+            }
+            fit();
+          });
           if (document.fonts) document.fonts.ready.then(fit);
         })();
       </script>
