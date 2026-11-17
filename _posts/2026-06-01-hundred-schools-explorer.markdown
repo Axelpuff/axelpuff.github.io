@@ -4,7 +4,7 @@ title:  "Hundred Schools Explorer"
 date:   2026-06-01 12:00:00 -0400
 tags:  featured
 categories: projects
-excerpt: "My last pre-AI project. A guide to classical Chinese philosophy, designed with interactive 3D elements to visualize the relationships between thinkers and ideas."
+excerpt: "A guide to classical Chinese philosophy, designed with interactive 3D elements to visualize the relationships between thinkers and ideas."
 icon: "/assets/HSE_icon.png"
 ---
 
